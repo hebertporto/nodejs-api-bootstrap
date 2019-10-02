@@ -1,7 +1,7 @@
 {
-  "name": "server-api",
+  "name": "nodejs-api-bootstrap",
   "version": "1.0.0",
-  "description": "Tyh Financial Server",
+  "description": "Nodejs Project Bootstrap",
   "main": "index.js",
   "scripts": {
     "fix:other": "yarn prettier --write",

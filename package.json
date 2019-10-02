@@ -1,0 +1,34 @@
+{
+  "name": "server-api",
+  "version": "1.0.0",
+  "description": "Tyh Financial Server",
+  "main": "index.js",
+  "scripts": {
+    "fix:other": "yarn prettier --write",
+    "fix:js": "yarn test:js --fix",
+    "fix": "yarn fix:js && yarn fix:other",
+    "prettier": "prettier \"**/*.{json,md,scss,yaml,yml}\"",
+    "test:other": "yarn prettier --list-different",
+    "test:js": "eslint --ignore-path .gitignore --ignore-path .prettierignore \"**/*.{js,jsx}\"",
+    "test": "yarn test:other && yarn test:js"
+  },
+  "author": "Hebert Porto",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "6.5.1",
+    "eslint-config-prettier": "6.3.0",
+    "eslint-plugin-prettier": "3.1.1",
+    "husky": "3.0.8",
+    "lint-staged": "9.4.1",
+    "prettier": "1.18.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": ["eslint --fix", "git add"],
+    "*.{json,md,scss,yaml,yml}": ["prettier --write", "git add"]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}

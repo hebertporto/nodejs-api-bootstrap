@@ -6,11 +6,8 @@
   "plugins": ["prettier", "sort-keys-fix"],
   "extends": ["prettier"],
   "parserOptions": {
-    "ecmaVersion": 8,
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "jsx": true
-    }
+    "ecmaVersion": 2020,
+    "sourceType": "module"
   },
   "rules": {
     "curly": 2,

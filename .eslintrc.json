@@ -3,7 +3,7 @@
     "browser": true,
     "node": true
   },
-  "plugins": ["prettier"],
+  "plugins": ["prettier", "sort-keys-fix"],
   "extends": ["prettier"],
   "parserOptions": {
     "ecmaVersion": 8,
@@ -43,13 +43,14 @@
     "prefer-const": 2,
     "prefer-promise-reject-errors": 2,
     "prettier/prettier": 2,
-    "sort-imports": 2,
+    "sort-keys-fix/sort-keys-fix": 2,
     "sort-keys": [
       2,
       "asc",
       {
         "caseSensitive": true,
-        "natural": true
+        "natural": false,
+        "minKeys": 2
       }
     ],
     "sort-vars": 2,
